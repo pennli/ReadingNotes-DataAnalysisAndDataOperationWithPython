@@ -1,0 +1,37 @@
+digraph {
+	graph [fontname=SimHei nodesep=2 splines=ortho]
+	node [fontname=SimHei shape=plaintext]
+	"全站" -> source
+	source -> site
+	site -> channel
+	channel -> media
+	{
+		node [fontname=SimHei penwidth=0 shape=box]
+		edge [fontname=SimHei]
+		"汇总值" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="black"><font color="white"><B>汇总值</B></font></td></tr><tr><td>环比变化量:-18455</td></tr><tr><td>环比变化率:-18.80%</td></tr></table></td></tr></table>>]
+		CRM [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#184da5"><font color="white"><B>CRM</B></font></td></tr><tr><td>环比变化量:-17591</td></tr><tr><td>环比变化率:-61.51%</td></tr></table></td></tr></table>>]
+		"source-others" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#d3d3d3"><font color="black"><B>source-others</B></font></td></tr><tr><td>环比变化量:-862</td></tr><tr><td>环比变化率:161.51%</td></tr></table></td></tr></table>>]
+		"公众号" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#72a518"><font color="black"><B>公众号</B></font></td></tr><tr><td>环比变化量:2444</td></tr><tr><td>环比变化率:171.15%</td></tr></table></td></tr></table>>]
+		"汇总值" -> CRM [label=<<table border="0"><tr><td><table border="0" cellspacing="0" VALIGN="MIDDLE" bgcolor="#ffffff"><tr><td>主因子</td></tr><tr><td>贡献率:95%</td></tr></table></td></tr></table>>]
+		"汇总值" -> "source-others" [label=<<table border="0"><tr><td><table border="0" cellspacing="0" VALIGN="MIDDLE" bgcolor="#ffffff"><tr><td>其他因子</td></tr><tr><td>贡献率:5%</td></tr></table></td></tr></table>>]
+		"source-others" -> "公众号" [label="潜在因子"]
+		"准会员" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#184da5"><font color="white"><B>准会员</B></font></td></tr><tr><td>环比变化量:-17575</td></tr><tr><td>环比变化率:-61.68%</td></tr></table></td></tr></table>>]
+		"site-others" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#d3d3d3"><font color="black"><B>site-others</B></font></td></tr><tr><td>环比变化量:-16</td></tr><tr><td>环比变化率:161.68%</td></tr></table></td></tr></table>>]
+		"邮件" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#72a518"><font color="black"><B>邮件</B></font></td></tr><tr><td>环比变化量:1</td></tr><tr><td>环比变化率:inf%</td></tr></table></td></tr></table>>]
+		CRM -> "准会员" [label=<<table border="0"><tr><td><table border="0" cellspacing="0" VALIGN="MIDDLE" bgcolor="#ffffff"><tr><td>主因子</td></tr><tr><td>贡献率:100%</td></tr></table></td></tr></table>>]
+		CRM -> "site-others" [label=<<table border="0"><tr><td><table border="0" cellspacing="0" VALIGN="MIDDLE" bgcolor="#ffffff"><tr><td>其他因子</td></tr><tr><td>贡献率:0%</td></tr></table></td></tr></table>>]
+		"site-others" -> "邮件" [label="潜在因子"]
+		"电视" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#184da5"><font color="white"><B>电视</B></font></td></tr><tr><td>环比变化量:-19070</td></tr><tr><td>环比变化率:-80.17%</td></tr></table></td></tr></table>>]
+		"channel-others" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#d3d3d3"><font color="black"><B>channel-others</B></font></td></tr><tr><td>环比变化量:1495</td></tr><tr><td>环比变化率:180.17%</td></tr></table></td></tr></table>>]
+		"商城" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#72a518"><font color="black"><B>商城</B></font></td></tr><tr><td>环比变化量:1476</td></tr><tr><td>环比变化率:31.56%</td></tr></table></td></tr></table>>]
+		"准会员" -> "电视" [label=<<table border="0"><tr><td><table border="0" cellspacing="0" VALIGN="MIDDLE" bgcolor="#ffffff"><tr><td>主因子</td></tr><tr><td>贡献率:109%</td></tr></table></td></tr></table>>]
+		"准会员" -> "channel-others" [label=<<table border="0"><tr><td><table border="0" cellspacing="0" VALIGN="MIDDLE" bgcolor="#ffffff"><tr><td>其他因子</td></tr><tr><td>贡献率:-9%</td></tr></table></td></tr></table>>]
+		"channel-others" -> "商城" [label="潜在因子"]
+		APP [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#184da5"><font color="white"><B>APP</B></font></td></tr><tr><td>环比变化量:-19024</td></tr><tr><td>环比变化率:-84.72%</td></tr></table></td></tr></table>>]
+		"media-others" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#d3d3d3"><font color="black"><B>media-others</B></font></td></tr><tr><td>环比变化量:-46</td></tr><tr><td>环比变化率:184.72%</td></tr></table></td></tr></table>>]
+		"站内信" [label=<<table border="0"><tr><td width="20"><table border="1" cellspacing="0" VALIGN="MIDDLE"><tr><td bgcolor="#72a518"><font color="black"><B>站内信</B></font></td></tr><tr><td>环比变化量:1</td></tr><tr><td>环比变化率:20.00%</td></tr></table></td></tr></table>>]
+		"电视" -> APP [label=<<table border="0"><tr><td><table border="0" cellspacing="0" VALIGN="MIDDLE" bgcolor="#ffffff"><tr><td>主因子</td></tr><tr><td>贡献率:100%</td></tr></table></td></tr></table>>]
+		"电视" -> "media-others" [label=<<table border="0"><tr><td><table border="0" cellspacing="0" VALIGN="MIDDLE" bgcolor="#ffffff"><tr><td>其他因子</td></tr><tr><td>贡献率:0%</td></tr></table></td></tr></table>>]
+		"media-others" -> "站内信" [label="潜在因子"]
+	}
+}
